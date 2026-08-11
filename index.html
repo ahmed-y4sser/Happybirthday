@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #121212;
+    --panel: #1a1a1a;
+    --text: #EDEAE4;
+    --dim: #8a8a86;
+    --accent: #5FC9C1;
+    --frame: #333330;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    padding: 24px 16px 64px;
+  }
+
+  header {
+    max-width: 640px;
+    margin: 0 auto 32px;
+    padding-top: 12px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .message {
+    background: var(--panel);
+    border-radius: 4px;
+    padding: 28px 24px;
+    line-height: 1.75;
+    font-size: 15px;
+    color: var(--text);
+  }
+
+  .message p {
+    margin-bottom: 18px;
+  }
+
+  .message p:last-child {
+    margin-bottom: 0;
+  }
+
+  .message .not-done {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  .clip {
+    position: relative;
+    background: var(--panel);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .clip .bracket-tl, .clip .bracket-tr, .clip .bracket-bl, .clip .bracket-br {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--accent);
+    z-index: 2;
+    opacity: 0.85;
+    pointer-events: none;
+  }
+  .clip .bracket-tl { top: 10px; left: 10px; border-right: none; border-bottom: none; }
+  .clip .bracket-br { bottom: 10px; right: 10px; border-left: none; border-top: none; }
+  .clip .bracket-tr { top: 10px; right: 10px; border-left: none; border-bottom: none; }
+  .clip .bracket-bl { bottom: 10px; left: 10px; border-right: none; border-top: none; }
+
+  video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    background: #000;
+  }
+
+  .team-section {
+    background: var(--panel);
+    border: 1px dashed var(--frame);
+    border-radius: 4px;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .team-section .eyebrow2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  .team-section p {
+    color: var(--dim);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  footer {
+    max-width: 640px;
+    margin: 40px auto 0;
+    text-align: center;
+    color: var(--frame);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">From all of us</div>
+  <h1>To Malak</h1>
+</header>
+
+<main>
+
+ <div class="team-section">
+    <div class="eyebrow2">From the team</div>
+    <p>A few words from the girls you share and live every moment with <3.</p>
+  </div>
+
+  <div class="clip">
+    <span class="bracket-tl"></span><span class="bracket-tr"></span>
+    <span class="bracket-bl"></span><span class="bracket-br"></span>
+    <video controls playsinline preload="metadata" poster="">
+      <source src="Videomain.mp4" type="video/mp4">
+      Your browser can't play this video.
+    </video>
+  </div>
+
+  
+</main>
+
+<footer>made with love, from all of us</footer>
+
+</body>
+</html>
